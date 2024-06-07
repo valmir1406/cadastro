@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Login bem-sucedido
-            window.location.href = 'index.html'; // Redireciona para a página de cadastro de alunos
+            window.location.href = 'cadastro.html'; // Redireciona para a página de cadastro de alunos
         })
         .catch((error) => {
             console.error('Erro ao fazer login: ', error.message);
