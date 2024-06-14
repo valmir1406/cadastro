@@ -5,11 +5,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // Login bem-sucedido
-            window.location.href = 'index.html'; // Redireciona para a página de cadastro de alunos
+            console.log('Login bem-sucedido!');
+            // Redirecionar para a página principal ou de dashboard
         })
         .catch((error) => {
-            console.error('Erro ao fazer login: ', error.message);
-            alert('Falha ao entrar: ' + error.message);
+            console.error('Erro ao entrar:', error.message);
         });
 });
